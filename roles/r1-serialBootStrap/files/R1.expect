@@ -52,7 +52,5 @@ expect "Router(config-if)#"
 send -- "description Group 1 LAN\r"
 expect "Router(config-if)#"
 
-send -- "int\r"
-expect "vyos@vyos#"
 
 sleep 1
