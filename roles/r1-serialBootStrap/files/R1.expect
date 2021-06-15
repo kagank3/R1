@@ -1,3 +1,14 @@
+#!/usr/bin/expect
+
+set timeout 120
+#set timeout -1         #Disable timeout
+log_user 0
+log_file -a "/tmp/r1.log"
+
+set prompt "serial parms 9600 N81"
+spawn telnet 10.150.70.10 4002
+expect $prompt
+
 #puts "Use puts if you would like to see output from your expect script"
 #Examples from:
 #https://wiki.vyos.net/wiki/User_Guide
@@ -11,37 +22,37 @@ send -- "\r"
 send -- "\r"
 expect "Router>"
 
-send -- "enable"
+send -- "enable\r"
 expect "Router#"
 
-send -- "conf t"
+send -- "conf t\r"
 expect "Router(config)#"
 
-send -- "int g0/1"
+send -- "int g0/1\r"
 expect "Router(config-if)#"
 
-send -- "ip address 10.150.70.1 255.255.255.0"
+send -- "ip address 10.150.70.1 255.255.255.0\r"
 expect "Router(config-if)#"
 
-send -- "no shut"
+send -- "no shut\r"
 expect "Router(config-if)#"
 
-send -- "description Lab Network"
+send -- "description Lab Network\r"
 expect "Router(config-if)#"
 
-send -- "int g0/0"
+send -- "int g0/0\r"
 expect "Router(config-if)#"
 
-send -- "ip address 10.150.71.1 255.255.255.0"
+send -- "ip address 10.150.71.1 255.255.255.0\r"
 expect "Router(config-if)#"
 
-send -- "no shut"
+send -- "no shut\r"
 expect "Router(config-if)#"
 
-send -- "description Group 1 LAN"
+send -- "description Group 1 LAN\r"
 expect "Router(config-if)#"
 
-send -- "int"
+send -- "int\r"
 expect "vyos@vyos#"
 
 sleep 1
