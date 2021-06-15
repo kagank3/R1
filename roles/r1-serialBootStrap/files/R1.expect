@@ -5,7 +5,6 @@ expect $prompt
 #https://wiki.vyos.net/wiki/User_Guide
 #https://wiki.vyos.net/wiki/DHCP_server
 
-send -- "\r"
 sleep 15
 send -- "\r"
 send -- "\r"
