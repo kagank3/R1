@@ -1,0 +1,50 @@
+expect $prompt
+
+#puts "Use puts if you would like to see output from your expect script"
+#Examples from:
+#https://wiki.vyos.net/wiki/User_Guide
+#https://wiki.vyos.net/wiki/DHCP_server
+
+send -- "\r"
+sleep 15
+send -- "\r"
+send -- "\r"
+send -- "\r"
+send -- "\r"
+send -- "\r"
+expect "Router>"
+
+send -- "en"
+expect "Router#"
+
+send -- "conf t"
+expect "Router(config)#"
+
+send -- "int g0/1"
+expect "Router(config-if)#"
+
+send -- "ip address 10.150.70.1 255.255.255.0"
+expect "Router(config-if)#"
+
+send -- "no shut"
+expect "Router(config-if)#"
+
+send -- "description Lab Network"
+expect "Router(config-if)#"
+
+send -- "int g0/0"
+expect "Router(config-if)#"
+
+send -- "ip address 10.150.71.1 255.255.255.0"
+expect "Router(config-if)#"
+
+send -- "no shut"
+expect "Router(config-if)#"
+
+send -- "description Group 1 LAN"
+expect "Router(config-if)#"
+
+send -- "int"
+expect "vyos@vyos#"
+
+sleep 1
