@@ -11,7 +11,7 @@ send -- "\r"
 send -- "\r"
 expect "Router>"
 
-send -- "en"
+send -- "enable"
 expect "Router#"
 
 send -- "conf t"
