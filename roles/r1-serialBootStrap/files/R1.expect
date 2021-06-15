@@ -1,5 +1,3 @@
-expect $prompt
-
 #puts "Use puts if you would like to see output from your expect script"
 #Examples from:
 #https://wiki.vyos.net/wiki/User_Guide
