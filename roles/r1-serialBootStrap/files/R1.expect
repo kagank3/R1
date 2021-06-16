@@ -29,6 +29,9 @@ expect "Router#"
 send -- "conf t\r"
 expect "Router(config)#"
 
+send -- "hostname R1"
+expect "Router(config)#"
+
 send -- "int g0/1\r"
 expect "Router(config-if)#"
 
