@@ -30,31 +30,31 @@ send -- "conf t\r"
 expect "Router(config)#"
 
 send -- "hostname R1\r"
-expect "Router(config)#"
+expect "R1(config)#"
 
 send -- "int g0/1\r"
-expect "Router(config-if)#"
+expect "R1(config-if)#"
 
 send -- "ip address 10.150.70.1 255.255.255.0\r"
-expect "Router(config-if)#"
+expect "R1(config-if)#"
 
 send -- "no shut\r"
-expect "Router(config-if)#"
+expect "R1(config-if)#"
 
 send -- "description Lab Network\r"
-expect "Router(config-if)#"
+expect "R1(config-if)#"
 
 send -- "int g0/0\r"
-expect "Router(config-if)#"
+expect "R1(config-if)#"
 
 send -- "ip address 10.150.71.1 255.255.255.0\r"
-expect "Router(config-if)#"
+expect "R1(config-if)#"
 
 send -- "no shut\r"
-expect "Router(config-if)#"
+expect "R1(config-if)#"
 
 send -- "description Group 1 LAN\r"
-expect "Router(config-if)#"
+expect "R1(config-if)#"
 
 
 sleep 1
