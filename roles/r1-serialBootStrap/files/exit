@@ -1,0 +1,25 @@
+#!/usr/bin/expect
+
+set timeout 120
+#set timeout -1         #Disable timeout
+log_user 0
+log_file -a "/tmp/r1.log"
+
+set prompt "serial parms 9600 N81"
+spawn telnet 10.150.70.10 4002
+expect $prompt
+
+#puts "Use puts if you would like to see output from your expect script"
+#Examples from:
+#https://wiki.vyos.net/wiki/User_Guide
+#https://wiki.vyos.net/wiki/DHCP_server
+
+sleep 10
+send -- "\r"
+send -- "\r"
+send -- "\r"
+expect "Would you like to enter"
+sleep 2
+send -- "no\r"
+sleep 2
+send -- "\r"
