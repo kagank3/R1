@@ -1,2 +1,5 @@
+- name: exit_inital_config
+  command: expect {{ role_path }/files/exit
+
 - name: serial_config
   command: expect {{ role_path }}/files/R1.expect
