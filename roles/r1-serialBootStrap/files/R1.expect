@@ -18,11 +18,6 @@ sleep 5
 send -- "\r"
 send -- "\r"
 send -- "\r"
-
-expect "Would you like to enter the initial configuration dialog? [yes/no] : % Please answer 'yes' or 'no'."
-send -- "no\r"
-sleep 10
-
 send -- "\r"
 send -- "\r"
 expect "Router>"
