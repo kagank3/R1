@@ -15,9 +15,10 @@ expect $prompt
 #https://wiki.vyos.net/wiki/DHCP_server
 
 sleep 15
+send -- "\r"
+send -- "\r"
+send -- "\r"
 send -- "end\r"
-send -- "\r"
-send -- "\r"
 send -- "\r"
 send -- "\r"
 expect "Router>"
