@@ -16,8 +16,6 @@ expect $prompt
 
 sleep 10
 send -- "\r"
-send -- "\r"
-send -- "\r"
 expect "Router>"
 
 send -- "enable\r"
