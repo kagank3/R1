@@ -21,7 +21,7 @@ send -- "\r"
 
 expect "Would you like to enter the initial configuration dialog? [yes/no] :"
 send -- "no\r"
-sleep 5
+sleep 10
 
 send -- "\r"
 send -- "\r"
