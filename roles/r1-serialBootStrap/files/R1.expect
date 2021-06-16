@@ -14,11 +14,11 @@ expect $prompt
 #https://wiki.vyos.net/wiki/User_Guide
 #https://wiki.vyos.net/wiki/DHCP_server
 
-sleep 15
+sleep 5
 send -- "\r"
 send -- "\r"
 send -- "\r"
-send -- "end\r"
+send -- "exit\r"
 send -- "\r"
 send -- "\r"
 expect "Router>"
